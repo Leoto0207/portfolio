@@ -1,25 +1,18 @@
-import "@fontsource/roboto/400.css";
-import Box from "@mui/material/Box";
-import "./App.css";
-import Navabar from "./Navbar";
-import Home from "./Home";
-import Skills from "./Skills";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Footer from "./Footer";
+import Layout from "./components/layout/Layout";
+import Hero from "./components/sections/Hero";
+import About from "./components/sections/About";
+import Experience from "./components/sections/Experience";
+import Skills from "./components/sections/Skills";
+import Contact from "./components/sections/Contact";
 
-function App() {
+export default function App() {
   return (
-    <Box>
-      <Router>
-        <Navabar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/skills" element={<Skills />} />
-        </Routes>
-      </Router>
-      <Footer />
-    </Box>
+    <Layout>
+      <Hero />
+      <About />
+      <Experience />
+      <Skills />
+      <Contact />
+    </Layout>
   );
 }
-
-export default App;

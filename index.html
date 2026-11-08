@@ -2,10 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>LeoTo Profile</title>
+    <meta
+      name="description"
+      content="Leo To — software developer in Brisbane. Software Intern at TrilogyCare, full-stack web development experience."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Leo To · Software Developer</title>
+    <script>
+      // Apply the saved/system theme before first paint to avoid a light flash.
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var dark = stored
+            ? stored === "dark"
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (dark) document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
